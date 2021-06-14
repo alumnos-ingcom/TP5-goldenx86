@@ -4,30 +4,22 @@
 ################
 
 
-def tribonacci(numero):
+def tribonacci(num):
     """Imprimir serie de Tribonacci"""
-    numero = int(input("Ingrese un número entero positivo, mayor a 3 si desea varios resultados: "))
-    if (numero < 1):
-        return
     primero = 1
     segundo = 1
     tercero = 1
 
-    print(primero, " ", end="")
-    if (numero > 1):
-        print(segundo, " ", end="")
-    if (numero > 2):
-        print(segundo, " ", end="")
-
-    for i in range(3, numero):
+    for i in range(3, num):
         actual = primero + segundo + tercero
         primero = segundo
         segundo = tercero
         tercero = actual
+    return(tercero)
 
-        print(actual, " ", end="")
-
+def prueba():
+    numero = int(input("Ingrese un número entero positivo, mayor a 3: "))
+    print(tribonacci(numero))
 
 if __name__ == "__main__":
-    numero = 0
-    tribonacci(numero)
+    prueba()

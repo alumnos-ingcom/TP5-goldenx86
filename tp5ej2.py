@@ -4,15 +4,18 @@
 ################
 
 
-def fibonacci(numero):
-    """Imprimir serie de Fibonacci"""
-    numero = int(input("Ingrese un número entero positivo, mayor a 2 si desea varios resultados: "))
+def fibonacci(num):
+    """Imprimir n valor de serie de Fibonacci"""
     primero, segundo = 0,1
-    for i in range(numero):
-        print(primero, end=" ")
+    for i in range(num):
         primero, segundo = segundo, primero + segundo
+    return segundo
+
+
+def prueba():
+    numero = int(input("Ingrese un número entero positivo, mayor a 2: "))
+    print(fibonacci(numero))
 
 
 if __name__ == "__main__":
-    numero = 0
-    fibonacci(numero)
+    prueba()

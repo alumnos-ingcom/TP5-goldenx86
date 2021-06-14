@@ -4,11 +4,23 @@
 ################
 
 
-def mayusminus():
+def mayusminus(string):
     """Invierte mayusculas y minusculas"""
+    invertido = ""
+    for i in range (len(string)):
+        if string[i].isupper():
+            invertido += string[i].lower()
+        elif string[i].islower():
+            invertido += string[i].upper()
+        else:
+            invertido += string[i]
+    return invertido
+
+
+def prueba():
     cadena = input("Ingrese un texto: ")
-    print(cadena.swapcase())
+    print(mayusminus(cadena))
 
 
 if __name__ == "__main__":
-    mayusminus()
+    prueba()

@@ -4,18 +4,22 @@
 ################
 
 
-def perfecto():
+def perfecto(num):
     """Identifica si un número es perfecto"""
-    numero = int(input("Ingrese un número entero positivo: "))
     suma = 0
-    for i in range(1, numero):
-        if (numero % i == 0):
+    for i in range(1, num):
+        if (num % i == 0):
             suma = suma + i
-    if numero == suma:
-        print("Es perfecto.")
+    if num == suma:
+        return(True)
     else:
-        print("No es perfecto.")
+        return(False)
+
+
+def prueba():
+    numero = int(input("Ingrese un número entero positivo: "))
+    print(perfecto(numero))
 
 
 if __name__ == "__main__":
-    perfecto()
+    prueba()
